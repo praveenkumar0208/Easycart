@@ -1,0 +1,8 @@
+package com.library.library.repository;
+
+import com.library.library.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository< User,Long> {
+    User findByEmail( String email );
+}
